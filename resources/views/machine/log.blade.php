@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="row justify-content-center">
-    <div class="card">
-        <div class="card-header">Machines</div>
-        <div class="card-body">
+        <div class="card">
+            <div class="card-header">Machines</div>
+            <div class="card-body">
 
 
-        <table class="table" id="table">
+            <table class="table" id="table">
         <thead>
         <tr>
             <th scope="col">ip</th>
@@ -19,8 +19,8 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($machine  as $machine)
-            @if($machine->status == 1)
+        @foreach($machines  as $machine)
+            @if($machine->status == 0)
             {{--@csrf--}}
             {{--@method('PUT')--}}
             <tr>
@@ -35,23 +35,22 @@
                 <td>
                     <a class="btn btn-primary" href="{{route('info',$machine->id)}}">Info</a>
                     <a class="btn btn-info" href="{{route('showEdit',$machine->id)}}">Edit</a>
-                    <a class="btn btn-danger" href="{{route('deleteMachine',$machine->id)}}">Supprimer</a>
+                    <a class="btn btn-dark" href="{{route('restoreMachine',$machine->id)}}">Restorer</a>
                 </td>
              
             </tr>
             @endif
         @endforeach
         </tbody>
-        </table>
-            <a class="btn btn-primary" href="{{route('create')}}">Ajouter une machine</a>
-
+    </table>
+            </div>
         </div>
-    </div>
-
+        
     <script>
         $(document).ready( function () {
             $('#table').DataTable();
         } );
     </script>
+
 
 @endsection

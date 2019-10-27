@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputIp">Commentaire</label>
-            <input type="text" class="form-control" id="exampleInputIp" placeholder="commentaire" name="comment">
+            <input type="text" class="form-control" id="exampleInputIp" placeholder="commentaire" name="comment" value="{{$machine->machine_comment}}">
         </div>
         <button type="submit" class="btn btn-primary">Confirmer</button>
     </form>

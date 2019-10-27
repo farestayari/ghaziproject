@@ -12,6 +12,15 @@
             <label for="exampleInputIp">@Ip</label>
             <input type="text" class="form-control" id="exampleInputIp" placeholder="ip" name="machine_ip">
         </div>
+        <div class="form-group">
+            <label for="exampleInputIp">Nom du revndeur</label>
+            <input type="text" class="form-control" id="exampleInputIp" placeholder="ip" name="vendor_name">
+        </div>
+        <div class="form-group">
+            <input type="hidden" class="form-control" id="exampleInputIp" placeholder="status" name="status" value="1">
+        </div>
+
+
         {{--<div class="form-group">--}}
             {{--<label for="exampleInputStatus">Status</label>--}}
             {{--<input disabled type="text" class="form-control" id="exampleInputStatus" placeholder="status">--}}

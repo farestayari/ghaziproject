@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    ESET
+                    <img src="{{asset('/images/eset.png')}}" width="350px" height="250px" alt="">
                 </div>
             </div>
         </div>

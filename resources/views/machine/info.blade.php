@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <table class="table">
+    <div class="row justify-content-center">
+        <div class="card">
+            <div class="card-header">Machines</div>
+            <div class="card-body">
+    <table class="table" id="table">
         <thead>
         <tr>
             <th scope="col">date de creation</th>
@@ -22,8 +26,15 @@
                 <td>down</td>
                 @endif
             <td><a class="btn btn-primary" href="{{route('edit',$machine->id)}}">edit</a></td>
-
         </tr>
         </tbody>
     </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready( function () {
+            $('#table').DataTable();
+        } );
+    </script>
 @endsection
